@@ -1,0 +1,31 @@
+右键git bush here
+git status -s
+git add XXX
+clear
+git commit -m "xxx"
+
+文件共四种状态：未被管理，工作区，暂存区，仓库
+
+被修改但是没有放入暂存区的文件是红色M，放入暂存区的是绿色M，提交之后的是git status不显示
+
+撤销对文件的修改，所有的修改都会丢失，且无法恢复。撤销是在add之前,即在送入暂存区之前，相当于自己修改了文件，按了ctrl+s。git checkout --XXX
+
+经常使用！！！将多个被修改了的文件加入暂存区：git add .
+
+从暂存区中移除文件：git reset HFAD XXX
+
+跳过暂存区，从工作区直接commit到仓库中：git commit -a -m "xxxx"
+
+从仓库和工作中同时移除文件：git rm -f XXX
+
+只从仓库中移除文件，保留工作区中对应的文件：git rm --cached XXX
+
+忽略：创建一个名字文.gitignore的配置文件，列出要忽略的文件的匹配模式
+
+查看提交历史：git log  最上是最新的
+              git log -2 查看最近2条
+               git log -2 --pretty=oneline
+
+回退到指定版本：git log --pretty=oneline然后git reset --hard 版本号，版本号要选中后右键copy
+
+回退到旧版本后查看包含最新提交的所有提交：gti relog --pretty=oneline,如果再git reset --hard 版本号跳到指定版本
